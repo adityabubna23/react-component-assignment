@@ -1,74 +1,44 @@
-# React + TypeScript + Vite
+# React Component Development Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a submission for a front-end development internship assignment. It includes two main components, an `InputField` and a `DataTable`, built with React, TypeScript, and Tailwind CSS. The components are documented and viewable using Storybook.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Storybook Preview
 
-## React Compiler
+**You can view the live component library here:** (https://my-project-q0rtlcgy5-adityas-projects-bf89df4e.vercel.app/?path=/docs/configure-your-project--docs)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ How to Run Locally
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/adityabubna23/react-component-assignment]
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd your-repo-name
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Run Storybook:**
+    ```bash
+    npm run storybook
+    ```
+5.  **Run Tests:**
+    ```bash
+    npm test
+    ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📖 My Approach
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+For this assignment, I focused on creating flexible and reusable components following modern React best practices.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# react-component-assignment
+* **InputField Component:** I used the `clsx` utility to dynamically manage CSS classes for the component's variants, sizes, and states (invalid, disabled). This keeps the JSX clean and the styling logic maintainable.
+* **DataTable Component:** I used React hooks like `useState` to manage the state for sorting and row selection. To optimize performance, I used `useMemo` to ensure the data is only re-sorted when the data itself or the sorting configuration changes.
+* **Testing:** I wrote basic unit tests using Vitest and React Testing Library to ensure the components render correctly with the given props, fulfilling the assignment's testing requirement.
