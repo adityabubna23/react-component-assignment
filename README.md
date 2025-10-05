@@ -6,7 +6,7 @@ This project is a submission for a front-end development internship assignment. 
 
 ## 🚀 Live Storybook Preview
 
-**You can view the live component library here:** [Your-Live-Vercel-Link-Goes-Here]
+**You can view the live component library here:** (https://my-project-q0rtlcgy5-adityas-projects-bf89df4e.vercel.app/?path=/docs/configure-your-project--docs)
 
 ---
 
@@ -14,7 +14,7 @@ This project is a submission for a front-end development internship assignment. 
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    git clone [https://github.com/adityabubna23/react-component-assignment]
     ```
 2.  **Navigate to the project directory:**
     ```bash
